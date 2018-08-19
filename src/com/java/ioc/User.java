@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Administrator on 2018/8/8 0008.
  */
-@Component
+@Component(value = "user1")
 public class User {
     public void add() {
         System.out.println("User Add Method.");

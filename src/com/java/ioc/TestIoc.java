@@ -55,15 +55,8 @@ public class TestIoc {
     @Test
     public void runUser1() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
-        User user = (User) context.getBean("user");
+        User user = (User) context.getBean("user1");
         user.add();
-    }
-
-    @Test
-    public void runUserService1() {
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
-        UserService userService = (UserService) context.getBean("userService");
-        userService.add();
     }
 
 }
