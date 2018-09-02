@@ -22,6 +22,7 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-core-4.3.18.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.46.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

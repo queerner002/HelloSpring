@@ -38,20 +38,6 @@
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <!-- 配置事务增强 -->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <!-- 设置进行事务操作的方法匹配规则 -->
-            <!-- name: Service层中需要事务增强的方法名，其中这里表示名称以transfer开头的所有方法 -->
-            <!-- propagation="REQUIRED"代表支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择 -->
-            <tx:method name="transfer*" propagation="REQUIRED" no-rollback-for="RuntimeException"/>
-        </tx:attributes>
-    </tx:advice>
-    <!-- 配置切面 -->
-    <aop:config>
-    <!-- 切入点 -->
-    <aop:pointcut id="bankPointcut" expression="execution(* com.java.tx.BankService.transfer*(..))"/>
-    <!-- 切面 -->
-    <aop:advisor advice-ref="txAdvice" pointcut-ref="bankPointcut"/>
-    </aop:config>
+    <!-- 配置开启事务注解 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 </beans>
