@@ -12,6 +12,7 @@ import org.springframework.context.ApplicationContextAware;
  來源：简书
  简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
  */
+
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
 
     private String name;

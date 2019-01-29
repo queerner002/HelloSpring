@@ -12,6 +12,9 @@ public class AcPersonServiceTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("person.xml");
         System.out.println("xml加载完毕");
         Person person1 = (Person) applicationContext.getBean("person1");
+        Person person2 = (Person) applicationContext.getBean("person1");
+        System.out.print("person1 == person2?  ");
+        System.out.println(person1==person2);
         System.out.println(person1);
         System.out.println("关闭容器");
         ((ClassPathXmlApplicationContext) applicationContext).close();
